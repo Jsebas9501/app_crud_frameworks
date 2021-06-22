@@ -65,6 +65,7 @@ function App() {
       .post(baseUrl, f, { params: { id: frameworkSeleccionado.id } })
       .then((response) => {
         let dataNueva = data;
+        // eslint-disable-next-line array-callback-return
         dataNueva.map((framework) => {
           if (framework.id === frameworkSeleccionado.id) {
             framework.nombre = frameworkSeleccionado.nombre;
